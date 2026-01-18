@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do It With Boldness Foundation</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .main-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow-auto;
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .nav-link {
+      transition: color 0.2s ease;
+    }
+    
+    .stat-number {
+      font-weight: 700;
+      line-height: 1;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div class="main-wrapper smooth-scroll"><!-- Navigation -->
+   <nav class="fixed w-full top-0 z-50 shadow-md" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex justify-between items-center h-16">
+      <div class="flex items-center"><span class="text-xl font-bold" id="nav-org-name">DWB Foundation</span>
+      </div>
+      <div class="hidden md:flex space-x-8"><a href="#home" class="nav-link font-medium">Home</a> <a href="#about" class="nav-link font-medium">About</a> <a href="#programs" class="nav-link font-medium">Programs</a> <a href="#impact" class="nav-link font-medium">Impact</a> <a href="#get-involved" class="nav-link font-medium">Get Involved</a> <a href="#contact" class="nav-link font-medium">Contact</a>
+      </div><button id="mobile-menu-btn" class="md:hidden p-2 rounded-md">
+       <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+       </svg></button>
+     </div>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2"><a href="#home" class="block py-2 nav-link font-medium">Home</a> <a href="#about" class="block py-2 nav-link font-medium">About</a> <a href="#programs" class="block py-2 nav-link font-medium">Programs</a> <a href="#impact" class="block py-2 nav-link font-medium">Impact</a> <a href="#get-involved" class="block py-2 nav-link font-medium">Get Involved</a> <a href="#contact" class="block py-2 nav-link font-medium">Contact</a>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="home" class="gradient-bg pt-24 pb-20 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+     <h1 class="text-5xl md:text-6xl font-bold mb-6" id="hero-tagline">Empowering Communities, Transforming Lives</h1>
+     <p class="text-xl md:text-2xl mb-8 opacity-90" id="hero-subtitle">Building a better tomorrow through wellness, education, and leadership</p><button class="px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow" id="cta-button">Get Involved</button>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4" id="about-title">About Us</h2>
+      <div class="w-24 h-1 mx-auto mb-8"></div>
+     </div>
+     <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+       <h3 class="text-2xl font-bold mb-4" id="mission-title">Our Mission</h3>
+       <p class="text-lg mb-6 leading-relaxed" id="mission-text">Do It With Boldness Foundation is a Kenyan social impact organization dedicated to advancing the United Nations Sustainable Development Goals 3, 4, and 5. We work tirelessly to promote good health and well-being, quality education, and gender equality across communities.</p>
+       <p class="text-lg leading-relaxed">Through innovative programs and community partnerships, we empower youth and communities with the tools, skills, and opportunities they need to thrive and create lasting positive change.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6">
+       <div class="p-6 rounded-xl shadow-lg text-center">
+        <div class="text-4xl mb-2">
+         🌟
+        </div>
+        <h4 class="font-bold text-lg mb-2">SDG 3</h4>
+        <p class="text-sm">Good Health &amp; Well-being</p>
+       </div>
+       <div class="p-6 rounded-xl shadow-lg text-center">
+        <div class="text-4xl mb-2">
+         📚
+        </div>
+        <h4 class="font-bold text-lg mb-2">SDG 4</h4>
+        <p class="text-sm">Quality Education</p>
+       </div>
+       <div class="p-6 rounded-xl shadow-lg text-center">
+        <div class="text-4xl mb-2">
+         ⚖️
+        </div>
+        <h4 class="font-bold text-lg mb-2">SDG 5</h4>
+        <p class="text-sm">Gender Equality</p>
+       </div>
+       <div class="p-6 rounded-xl shadow-lg text-center">
+        <div class="text-4xl mb-2">
+         💪
+        </div>
+        <h4 class="font-bold text-lg mb-2">Bold Action</h4>
+        <p class="text-sm">Community Impact</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Programs Section -->
+   <section id="programs" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Our Programs</h2>
+      <div class="w-24 h-1 mx-auto mb-8"></div>
+      <p class="text-lg max-w-3xl mx-auto">Comprehensive initiatives designed to create sustainable impact in communities across Kenya</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-8 rounded-xl shadow-lg card-hover">
+       <div class="text-5xl mb-4">
+        🏥
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Wellness Programs</h3>
+       <p class="mb-4">Comprehensive health and wellness initiatives for schools and communities, promoting physical and mental well-being through education and support services.</p>
+       <ul class="space-y-2 text-sm">
+        <li>✓ Health education workshops</li>
+        <li>✓ Mental health support</li>
+        <li>✓ Community wellness drives</li>
+       </ul>
+      </div>
+      <div class="p-8 rounded-xl shadow-lg card-hover">
+       <div class="text-5xl mb-4">
+        📖
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Education Initiatives</h3>
+       <p class="mb-4">Literacy programs, academic support, and educational resources to ensure every child has access to quality learning opportunities.</p>
+       <ul class="space-y-2 text-sm">
+        <li>✓ Literacy programs</li>
+        <li>✓ Academic tutoring</li>
+        <li>✓ Educational resources</li>
+       </ul>
+      </div>
+      <div class="p-8 rounded-xl shadow-lg card-hover">
+       <div class="text-5xl mb-4">
+        👑
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Leadership Development</h3>
+       <p class="mb-4">Empowering youth with leadership skills, confidence, and vision to become change-makers in their communities.</p>
+       <ul class="space-y-2 text-sm">
+        <li>✓ Youth leadership training</li>
+        <li>✓ Mentorship programs</li>
+        <li>✓ Community projects</li>
+       </ul>
+      </div>
+      <div class="p-8 rounded-xl shadow-lg card-hover">
+       <div class="text-5xl mb-4">
+        🎯
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Life Skills Training</h3>
+       <p class="mb-4">Essential life skills training for students and community members to navigate challenges and build successful futures.</p>
+       <ul class="space-y-2 text-sm">
+        <li>✓ Financial literacy</li>
+        <li>✓ Communication skills</li>
+        <li>✓ Problem-solving workshops</li>
+       </ul>
+      </div>
+      <div class="p-8 rounded-xl shadow-lg card-hover">
+       <div class="text-5xl mb-4">
+        🚀
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Career Mentorship</h3>
+       <p class="mb-4">Connecting youth with experienced professionals for guidance, support, and pathways to meaningful careers.</p>
+       <ul class="space-y-2 text-sm">
+        <li>✓ One-on-one mentoring</li>
+        <li>✓ Career guidance</li>
+        <li>✓ Networking opportunities</li>
+       </ul>
+      </div>
+      <div class="p-8 rounded-xl shadow-lg card-hover">
+       <div class="text-5xl mb-4">
+        🤝
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Community Partnerships</h3>
+       <p class="mb-4">Building strong collaborations with local organizations, schools, and stakeholders to amplify our impact.</p>
+       <ul class="space-y-2 text-sm">
+        <li>✓ School partnerships</li>
+        <li>✓ Community outreach</li>
+        <li>✓ Collaborative projects</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section><!-- Impact Section -->
+   <section id="impact" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Our Impact</h2>
+      <div class="w-24 h-1 mx-auto mb-8"></div>
+      <p class="text-lg max-w-3xl mx-auto">Measurable results from our commitment to community transformation</p>
+     </div>
+     <div class="grid md:grid-cols-4 gap-8 mb-12">
+      <div class="text-center p-6 rounded-xl shadow-lg">
+       <div class="stat-number text-5xl mb-2">
+        5,000+
+       </div>
+       <p class="text-lg font-semibold">Students Reached</p>
+      </div>
+      <div class="text-center p-6 rounded-xl shadow-lg">
+       <div class="stat-number text-5xl mb-2">
+        50+
+       </div>
+       <p class="text-lg font-semibold">Schools Partnered</p>
+      </div>
+      <div class="text-center p-6 rounded-xl shadow-lg">
+       <div class="stat-number text-5xl mb-2">
+        200+
+       </div>
+       <p class="text-lg font-semibold">Mentors Engaged</p>
+      </div>
+      <div class="text-center p-6 rounded-xl shadow-lg">
+       <div class="stat-number text-5xl mb-2">
+        30+
+       </div>
+       <p class="text-lg font-semibold">Communities Served</p>
+      </div>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8">
+      <div class="p-8 rounded-xl shadow-lg">
+       <h3 class="text-2xl font-bold mb-4">Success Stories</h3>
+       <p class="mb-4 leading-relaxed">Our programs have transformed countless lives across Kenya. From students gaining confidence through leadership training to communities accessing vital wellness resources, the impact is real and measurable.</p>
+       <p class="leading-relaxed">We've seen literacy rates improve, mental health awareness increase, and young people stepping into leadership roles with boldness and purpose.</p>
+      </div>
+      <div class="p-8 rounded-xl shadow-lg">
+       <h3 class="text-2xl font-bold mb-4">Future Goals</h3>
+       <p class="mb-4 leading-relaxed">We're committed to expanding our reach to serve 10,000+ students by 2025, establishing 100+ school partnerships, and creating sustainable community wellness programs.</p>
+       <p class="leading-relaxed">Our vision includes launching digital learning platforms, expanding career mentorship networks, and building regional resource centers.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Get Involved Section -->
+   <section id="get-involved" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Get Involved</h2>
+      <div class="w-24 h-1 mx-auto mb-8"></div>
+      <p class="text-lg max-w-3xl mx-auto">Join us in creating lasting change in communities across Kenya</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-8 rounded-xl shadow-lg text-center card-hover">
+       <div class="text-5xl mb-4">
+        💝
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Donate</h3>
+       <p class="mb-6">Your generous contributions help us expand our programs and reach more communities in need.</p><button class="px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-shadow">Support Us</button>
+      </div>
+      <div class="p-8 rounded-xl shadow-lg text-center card-hover">
+       <div class="text-5xl mb-4">
+        🙋
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Volunteer</h3>
+       <p class="mb-6">Share your time, skills, and passion to make a direct impact in students' and communities' lives.</p><button class="px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-shadow">Join Our Team</button>
+      </div>
+      <div class="p-8 rounded-xl shadow-lg text-center card-hover">
+       <div class="text-5xl mb-4">
+        🤝
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Partner</h3>
+       <p class="mb-6">Collaborate with us to create innovative solutions and amplify our collective impact.</p><button class="px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-shadow">Partner With Us</button>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+     <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+      <div class="w-24 h-1 mx-auto mb-8"></div>
+      <p class="text-lg">We'd love to hear from you. Reach out to learn more about our work or get involved.</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="p-6 rounded-xl shadow-lg text-center">
+       <div class="text-4xl mb-4">
+        📧
+       </div>
+       <h3 class="text-xl font-bold mb-2">Email</h3>
+       <p id="contact-email-display">info@dwbfoundation.org</p>
+      </div>
+      <div class="p-6 rounded-xl shadow-lg text-center">
+       <div class="text-4xl mb-4">
+        📱
+       </div>
+       <h3 class="text-xl font-bold mb-2">Phone</h3>
+       <p id="contact-phone-display">+254 723 436527</p>
+      </div>
+     </div>
+     <div class="p-8 rounded-xl shadow-lg">
+      <h3 class="text-2xl font-bold mb-6 text-center">Send us a message</h3>
+      <form id="contact-form" class="space-y-4">
+       <div><label for="name" class="block font-semibold mb-2">Name</label> <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-blue-500">
+       </div>
+       <div><label for="email" class="block font-semibold mb-2">Email</label> <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-blue-500">
+       </div>
+       <div><label for="message" class="block font-semibold mb-2">Message</label> <textarea id="message" required rows="5" class="w-full px-4 py-3 rounded-lg border-2 focus:outline-none focus:border-blue-500"></textarea>
+       </div><button type="submit" class="w-full px-6 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-shadow">Send Message</button>
+      </form>
+      <div id="form-success" class="hidden mt-4 p-4 rounded-lg text-center font-semibold">
+       Thank you for your message! We'll get back to you soon.
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="py-12 px-4">
+    <div class="max-w-7xl mx-auto text-center">
+     <h3 class="text-2xl font-bold mb-4" id="footer-org-name">Do It With Boldness Foundation</h3>
+     <p class="mb-4">Empowering communities through wellness, education, and leadership</p>
+     <p class="text-sm opacity-75">© 2025 Do It With Boldness Foundation. All rights reserved.</p>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      organization_name: "DWB Foundation",
+      tagline: "Empowering Communities, Transforming Lives",
+      hero_subtitle: "Building a better tomorrow through wellness, education, and leadership",
+      mission_title: "Our Mission",
+      mission_text: "Do It With Boldness Foundation is a Kenyan social impact organization dedicated to advancing the United Nations Sustainable Development Goals 3, 4, and 5. We work tirelessly to promote good health and well-being, quality education, and gender equality across communities.",
+      contact_email: "info@dwbfoundation.org",
+      contact_phone: "+254 123 456 789",
+      cta_button: "Get Involved",
+      background_color: "#ffffff",
+      nav_color: "#1e40af",
+      text_color: "#1f2937",
+      primary_action_color: "#3b82f6",
+      secondary_surface_color: "#f3f4f6",
+      font_family: "Inter",
+      font_size: 16
+    };
+
+    async function onConfigChange(config) {
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseSize = config.font_size || defaultConfig.font_size;
+      const baseFontStack = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+      
+      document.body.style.fontFamily = `${customFont}, ${baseFontStack}`;
+      document.body.style.fontSize = `${baseSize}px`;
+      document.body.style.backgroundColor = config.background_color || defaultConfig.background_color;
+      document.body.style.color = config.text_color || defaultConfig.text_color;
+      
+      const navColor = config.nav_color || defaultConfig.nav_color;
+      const navbar = document.getElementById('navbar');
+      navbar.style.backgroundColor = navColor;
+      navbar.style.color = '#ffffff';
+      
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.style.color = '#ffffff';
+      });
+      
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      mobileMenuBtn.style.color = '#ffffff';
+      
+      const surfaceColor = config.secondary_surface_color || defaultConfig.secondary_surface_color;
+      const cards = document.querySelectorAll('.shadow-lg');
+      cards.forEach(card => {
+        card.style.backgroundColor = surfaceColor;
+      });
+      
+      const primaryColor = config.primary_action_color || defaultConfig.primary_action_color;
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(button => {
+        button.style.backgroundColor = primaryColor;
+        button.style.color = '#ffffff';
+      });
+      
+      const dividers = document.querySelectorAll('.w-24.h-1');
+      dividers.forEach(div => {
+        div.style.backgroundColor = primaryColor;
+      });
+      
+      document.getElementById('nav-org-name').textContent = config.organization_name || defaultConfig.organization_name;
+      document.getElementById('hero-tagline').textContent = config.tagline || defaultConfig.tagline;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('mission-title').textContent = config.mission_title || defaultConfig.mission_title;
+      document.getElementById('mission-text').textContent = config.mission_text || defaultConfig.mission_text;
+      document.getElementById('contact-email-display').textContent = config.contact_email || defaultConfig.contact_email;
+      document.getElementById('contact-phone-display').textContent = config.contact_phone || defaultConfig.contact_phone;
+      document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
+      document.getElementById('footer-org-name').textContent = config.organization_name || defaultConfig.organization_name;
+      
+      const headings = document.querySelectorAll('h1, h2, h3, h4');
+      headings.forEach(heading => {
+        const tagName = heading.tagName.toLowerCase();
+        if (tagName === 'h1') heading.style.fontSize = `${baseSize * 2.5}px`;
+        else if (tagName === 'h2') heading.style.fontSize = `${baseSize * 2}px`;
+        else if (tagName === 'h3') heading.style.fontSize = `${baseSize * 1.5}px`;
+        else if (tagName === 'h4') heading.style.fontSize = `${baseSize * 1.25}px`;
+      });
+      
+      const paragraphs = document.querySelectorAll('p');
+      paragraphs.forEach(p => {
+        p.style.fontSize = `${baseSize}px`;
+      });
+      
+      const smallText = document.querySelectorAll('.text-sm');
+      smallText.forEach(text => {
+        text.style.fontSize = `${baseSize * 0.875}px`;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.secondary_surface_color || defaultConfig.secondary_surface_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.secondary_surface_color = value;
+                window.elementSdk.setConfig({ secondary_surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.nav_color || defaultConfig.nav_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.nav_color = value;
+                window.elementSdk.setConfig({ nav_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["organization_name", config.organization_name || defaultConfig.organization_name],
+        ["tagline", config.tagline || defaultConfig.tagline],
+        ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+        ["mission_title", config.mission_title || defaultConfig.mission_title],
+        ["mission_text", config.mission_text || defaultConfig.mission_text],
+        ["contact_email", config.contact_email || defaultConfig.contact_email],
+        ["contact_phone", config.contact_phone || defaultConfig.contact_phone],
+        ["cta_button", config.cta_button || defaultConfig.cta_button]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.getElementById('mobile-menu').classList.add('hidden');
+        }
+      });
+    });
+
+    document.getElementById('cta-button').addEventListener('click', function() {
+      document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const successMsg = document.getElementById('form-success');
+      successMsg.classList.remove('hidden');
+      this.reset();
+      setTimeout(() => {
+        successMsg.classList.add('hidden');
+      }, 5000);
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9aae83f1842ff48a',t:'MTc2NTIyMDUyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
