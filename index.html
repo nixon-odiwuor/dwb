@@ -328,7 +328,7 @@
     </div>
    </footer>
   </div>
-  <script>
+ <script>
     const defaultConfig = {
       organization_name: "DWB Foundation",
       tagline: "Empowering Communities, Transforming Lives",
@@ -339,9 +339,11 @@
       contact_phone: "+254 123 456 789",
       cta_button: "Get Involved",
       background_color: "#ffffff",
-      nav_color: "#1A1A7F",
+      // IDENTIFIED: Corporate Navy Blue for Navigation
+      nav_color: "#1A1A7F", 
       text_color: "#1f2937",
-      primary_action_color: "#1A1A7F",
+      // IDENTIFIED: Corporate Green for Primary Actions/Buttons
+      primary_action_color: "#00B300", 
       secondary_surface_color: "#f3f4f6",
       font_family: "Inter",
       font_size: 16
@@ -359,8 +361,10 @@
       
       const navColor = config.nav_color || defaultConfig.nav_color;
       const navbar = document.getElementById('navbar');
-      navbar.style.backgroundColor = navColor;
-      navbar.style.color = '#ffffff';
+      if (navbar) {
+        navbar.style.backgroundColor = navColor;
+        navbar.style.color = '#ffffff';
+      }
       
       const navLinks = document.querySelectorAll('.nav-link');
       navLinks.forEach(link => {
@@ -368,7 +372,7 @@
       });
       
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      mobileMenuBtn.style.color = '#ffffff';
+      if (mobileMenuBtn) mobileMenuBtn.style.color = '#ffffff';
       
       const surfaceColor = config.secondary_surface_color || defaultConfig.secondary_surface_color;
       const cards = document.querySelectorAll('.shadow-lg');
@@ -388,15 +392,16 @@
         div.style.backgroundColor = primaryColor;
       });
       
-      document.getElementById('nav-org-name').textContent = config.organization_name || defaultConfig.organization_name;
-      document.getElementById('hero-tagline').textContent = config.tagline || defaultConfig.tagline;
-      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
-      document.getElementById('mission-title').textContent = config.mission_title || defaultConfig.mission_title;
-      document.getElementById('mission-text').textContent = config.mission_text || defaultConfig.mission_text;
-      document.getElementById('contact-email-display').textContent = config.contact_email || defaultConfig.contact_email;
-      document.getElementById('contact-phone-display').textContent = config.contact_phone || defaultConfig.contact_phone;
-      document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
-      document.getElementById('footer-org-name').textContent = config.organization_name || defaultConfig.organization_name;
+      // Update text content
+      if (document.getElementById('nav-org-name')) document.getElementById('nav-org-name').textContent = config.organization_name || defaultConfig.organization_name;
+      if (document.getElementById('hero-tagline')) document.getElementById('hero-tagline').textContent = config.tagline || defaultConfig.tagline;
+      if (document.getElementById('hero-subtitle')) document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      if (document.getElementById('mission-title')) document.getElementById('mission-title').textContent = config.mission_title || defaultConfig.mission_title;
+      if (document.getElementById('mission-text')) document.getElementById('mission-text').textContent = config.mission_text || defaultConfig.mission_text;
+      if (document.getElementById('contact-email-display')) document.getElementById('contact-email-display').textContent = config.contact_email || defaultConfig.contact_email;
+      if (document.getElementById('contact-phone-display')) document.getElementById('contact-phone-display').textContent = config.contact_phone || defaultConfig.contact_phone;
+      if (document.getElementById('cta-button')) document.getElementById('cta-button').textContent = config.cta_button || defaultConfig.cta_button;
+      if (document.getElementById('footer-org-name')) document.getElementById('footer-org-name').textContent = config.organization_name || defaultConfig.organization_name;
       
       const headings = document.querySelectorAll('h1, h2, h3, h4');
       headings.forEach(heading => {
@@ -502,6 +507,7 @@
       ]);
     }
 
+    // Initialization logic
     if (window.elementSdk) {
       window.elementSdk.init({
         defaultConfig,
@@ -509,12 +515,19 @@
         mapToCapabilities,
         mapToEditPanelValues
       });
+    } else {
+      // Fallback: apply default config if SDK is not present for local preview
+      onConfigChange(defaultConfig);
     }
 
-    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    });
+    // Event Listeners
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu) menu.classList.toggle('hidden');
+      });
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -522,28 +535,37 @@
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          document.getElementById('mobile-menu').classList.add('hidden');
+          const menu = document.getElementById('mobile-menu');
+          if (menu) menu.classList.add('hidden');
         }
       });
     });
 
-    document.getElementById('cta-button').addEventListener('click', function() {
-      document.getElementById('get-involved').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    const ctaBtn = document.getElementById('cta-button');
+    if (ctaBtn) {
+      ctaBtn.addEventListener('click', function() {
+        const target = document.getElementById('get-involved');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
 
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const successMsg = document.getElementById('form-success');
-      successMsg.classList.remove('hidden');
-      this.reset();
-      setTimeout(() => {
-        successMsg.classList.add('hidden');
-      }, 5000);
-    });
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const successMsg = document.getElementById('form-success');
+        if (successMsg) successMsg.classList.remove('hidden');
+        this.reset();
+        setTimeout(() => {
+          if (successMsg) successMsg.classList.add('hidden');
+        }, 5000);
+      });
+    }
   </script>
  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9aae83f1842ff48a',t:'MTc2NTIyMDUyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
+
 
 
 
